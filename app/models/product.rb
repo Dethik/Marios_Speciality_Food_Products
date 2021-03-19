@@ -1,5 +1,5 @@
 class Product < ApplicationRecord
-  has_and_belongs_to_many :users
+  belongs_to_many :users
   has_and_belongs_to_many :reviews
   validates :title, presence: true, uniqueness: true
   before_save(:titleize_product)
