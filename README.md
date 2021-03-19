@@ -1,10 +1,10 @@
-# Template README
+# Mario's Speciality Food Products
 #### **Author: Zack Rutledge**
 * * *
 
 ## Description
 
-
+This is a project using a one to many relationship to build a food website.
 
 ## Technologies used
 
@@ -20,7 +20,9 @@
 * * *
 ## User Stories
 
-
+Users should be able to add, update and delete new products. Don't worry about user authentication. Assume everyone who visits the site is an admin for now.
+Users should be able to click an individual product to see its detail page. (You will not be expected to show the product's average rating. That's included in the further exploration section.)
+Users should be able to add a review to a product.
 
 * * *
 ## Schema
