@@ -1,0 +1,23 @@
+<h1>Current Reviews</h1>
+
+<% if @reviews.any? %>
+  <ul>
+    <% @reviews.each do |review| %>
+      <li><%= link_to review.category, review_path(review) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>Sorry, there are no reviews at this time.</p>
+<% end %>
+<div class="form-container">
+  <h1>Add New Reviews!</h1>
+  <div class="form">
+    <%= form_for @review do |f| %>
+      <%= f.label "New Review" %>
+      <%= f.text_field :category, class: "form-control", require: "true" %>
+      <%= f.submit class: "submit" %>
+    <% end %>
+  </div>
+</div>
+
+<p><%= link_to "Return to the Produce", products_path %></p>

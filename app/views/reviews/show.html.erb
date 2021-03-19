@@ -1,0 +1,18 @@
+<h1>User: <%= @user.name %></h1>
+
+<h4>Reviews Written by <%= @user.name %>:</h4>
+<% if @user.reviews.any? %>
+  <% @user.reviews.each do |review| %>
+    <ul>
+      <li><%= link_to review.title, user_review_path(@user, review)%></li>
+    </ul>
+  <% end %>
+<% else %>
+  <p>No reviews by this user yet.</p>
+<% end %>
+
+<p><%= link_to "Edit user", edit_user_path(@user) %></p>
+<p><%= link_to "Delete user", user_path(@user), :data => {:confirm => "Are you sure?", :method => "delete"} %></p>
+<p><%= link_to "Return to users", users_path %></p>
+<p><%= link_to "Return to reviews", reviews_path(@reviews) %></p>
+<p><%= link_to "Return to the Produce", products_path %></p>
