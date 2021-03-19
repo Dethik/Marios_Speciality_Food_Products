@@ -3,7 +3,7 @@
 <% if @reviews.any? %>
   <ul>
     <% @reviews.each do |review| %>
-      <li><%= link_to review.category, review_path(review) %></li>
+      <li><%= link_to review.name, review_path(review) %></li>
     <% end %>
   </ul>
 <% else %>
