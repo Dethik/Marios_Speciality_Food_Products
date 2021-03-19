@@ -2,8 +2,6 @@ class ProductsController < ApplicationController
   def index
     if params[:search]
       @products = Product.where('name LIKE ?', "%#{params[:search]}%")
-    elsif params[:sort_rating]
-      @products = Product.order("rating DESC")
     elsif params[:sort_alpha]
       @products = Product.order("name")
     else
