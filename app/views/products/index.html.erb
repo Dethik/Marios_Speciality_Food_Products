@@ -1,0 +1,29 @@
+<h1>product Book</h1>
+
+<div class="form">
+  <%= form_tag products_path, method: :get do %>
+    <%= label_tag "Search for Produce" %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag 'Search', name: nil, class: "submit" %>
+  <% end %>
+</div>
+<div class="list">
+  <% if @products.any? %>
+      <% @products.each do |product| %>
+        <p><%= link_to product.name, product_path(product) %></p>
+      <% end %>
+  <% else %>
+    <p>Sorry, there are no products, yet.</p>
+  <% end %>
+</div>
+
+<%= form_tag products_path, method: :get do %>
+  <%= submit_tag "Sort by Rating", name: :sort_rating, class: "submit" %>
+<% end %>
+<%= form_tag products_path, method: :get do %>
+  <%= submit_tag "Sort Alphabetically", name: :sort_alpha, class: "submit" %>
+<% end %>
+
+<p><%= link_to "Add Produce to our list!", new_product_path %></p>
+<p><%= link_to "Go to Full User List", users_path %></p>
+<p><%= link_to "Go to Full Review List", reviews_path %></p>

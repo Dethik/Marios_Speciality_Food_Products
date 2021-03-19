@@ -1,11 +1,6 @@
-class Product < ApplicationRecord
+class Review < ApplicationRecord
   belongs_to_many :users
-  has_and_belongs_to_many :products
-  validates :title, presence: true, uniqueness: true
-  before_save(:titleize_product)
+  has_and_belongs_to_many :reviews
+  validates :title, presence: true
 
-  private
-    def titleize_product
-      self.title = self.title.titleize
-    end
 end
