@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Product.destroy_all
+User.destroy_all
+
+2.times do |index|
+  user = User.create!(name: Faker::Name.unique.name)
+  10.times do |index|
+    product = Product.create!(name: Faker::Food.unique.vegetables)
+  end
+  10.times do |index|
+    product = Product.create!(name: Faker::Food.unique.fruits)
+  end
+end
