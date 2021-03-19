@@ -12,11 +12,7 @@
 <div class="form-container">
   <h1>Add New Reviews!</h1>
   <div class="form">
-    <%= form_for @review do |f| %>
-      <%= f.label "New Review" %>
-      <%= f.text_field :category, class: "form-control", require: "true" %>
-      <%= f.submit class: "submit" %>
-    <% end %>
+    <%= render "layouts/review_form" %>
   </div>
 </div>
 

@@ -1,0 +1,14 @@
+
+<%= form_for [ @product ] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :cost %>
+  <%= f.text_field :cost %>
+  <%= f.label :origin %>
+  <%= f.select(:origin, Product::COUNTRY_LIST) %>
+  <%= f.submit %>
+<% end %>
+
+<div class="product-error">
+  <%= render "layouts/errors", :object => @product %>
+</div>
