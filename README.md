@@ -27,7 +27,7 @@ Users should be able to add a review to a product.
 * * *
 ## Schema
 
-<img src="./app/assets/images/recipe_box_schema.png" alt="Image of schema.">
+<img src="./app/assets/images/schema.jpg" alt="Image of schema.">
 
 * * *
 ## Software Requirements
@@ -42,7 +42,7 @@ Users should be able to add a review to a product.
 
 2. Once you have chosen your desired directory, clone the github repo using the version control tool `git` (<a href="https://www.learnhowtoprogram.com/introduction-to-programming/getting-started-with-intro-to-programming/git-and-github">download instructions</a>). Typing the following command into your terminal:
 ```bash
-$ git clone https://github.com/andyL89/rails_recipe_box
+$ git clone https://github.com/Dethik/Marios_Speciality_Food_Products
 ```
 3. Open the project in VSCode by typing the following in your terminal:
 
@@ -63,17 +63,21 @@ $ gem install bundler
 $ bundle install
 ```
 
-6. Create a database for this project by typing the following into your terminal while located in the root directory:
+6. Add your PSQL Username and Password to the database.yml file located within the config folder!
+<br>
+<img src="./app/assets/images/config_db.jpg" alt="Image of folder and file location.">
+
+7. Create a database for this project by typing the following into your terminal while located in the root directory:
 ```
 $ rake db:create
 ```
 
-7. Add all tables to the database by typing the following in your terminal:
+8. Add all tables to the database by typing the following in your terminal:
 ```
 $ rake db:migrate
 ```
 
-8. Mirror the migration database changes in the test database:
+9. Mirror the migration database changes in the test database:
 ```
 $ rake db:test:prepare
 ```
