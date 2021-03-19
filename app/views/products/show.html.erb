@@ -3,11 +3,11 @@
 <h3>Country of Origin: <%= @product.country %></h3>
 
 <button class="btn btn-default"><p><%= link_to "Add Review", new_product_review_path(@product) %></p></button>
-  <button class="btn btn-default"><p><%= link_to "Delete Product", product_path(@product),
-    :data => {:confirm => "Are you sure?",
-    :method => "delete"} %></p></button>
-  <button class="btn btn-default"> <p> <%= link_to "Edit", edit_product_path(@product) %></p>
-  <button class="btn btn-default"><p><%= link_to "Return to products", products_path %></p></button>
+<button class="btn btn-default"><p><%= link_to "Delete Product", product_path(@product),
+  :data => {:confirm => "Are you sure?",
+  :method => "delete"} %></p></button>
+<%= render "/layouts/product_form" %>
+
 
 <% if @product.reviews.any? %>
   <h4>Here are the reviews for this product:</h4>
@@ -26,3 +26,5 @@
 <% else %>
   <p>There are no reviews yet!</p>
 <% end %>
+
+<button class="btn btn-default"><p><%= link_to "Return to products", products_path %></p></button>
