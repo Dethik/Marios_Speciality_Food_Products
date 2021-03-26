@@ -86,6 +86,8 @@ The database should now be correctly set up. And you may start a local server to
 
 9. To start a local server, open your default browser and type "localhost:3000" into the search bar and press enter. Here, you will see the live server.
 
+10. Once on "localhost:3000" sign up with an email and password and have fun.
+
 ## Running Tests
 * This application was created using test-driven development (TDD).
 * To run the tests yourself, follow the steps below.
