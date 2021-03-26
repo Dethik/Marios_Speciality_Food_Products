@@ -5,6 +5,7 @@
 ## Description
 
 This is a project using a one to many relationship to build a food website.
+This project includes authorization and authentication services as well.
 
 ## Technologies used
 
@@ -16,6 +17,7 @@ This is a project using a one to many relationship to build a food website.
 * RSpec
 * Bundler
 * PostgreSQL
+* Devise
 
 * * *
 ## User Stories
@@ -23,6 +25,10 @@ This is a project using a one to many relationship to build a food website.
 Users should be able to add, update and delete new products. Don't worry about user authentication. Assume everyone who visits the site is an admin for now.
 Users should be able to click an individual product to see its detail page. (You will not be expected to show the product's average rating. That's included in the further exploration section.)
 Users should be able to add a review to a product.
+As an admin, I should be able to log in and log out of the application.
+As an admin, I should be able to add, update and delete projects.
+As an admin, I should be able to add posts.
+As an admin, I want to ensure that other users don't have access to CRUD functionality.
 
 * * *
 ## Schema
