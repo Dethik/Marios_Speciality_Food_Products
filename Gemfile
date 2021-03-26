@@ -39,6 +39,12 @@ gem 'jquery-rails'
 
 gem 'faker'
 
+gem 'devise'
+
+gem 'rails_admin', '~> 2.0'
+
+gem 'cancancan'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -60,7 +66,6 @@ group :test do
   gem 'shoulda-matchers'
   gem 'capybara'
 end
-
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
