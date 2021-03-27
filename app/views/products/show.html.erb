@@ -12,7 +12,8 @@
   <ul>
     <% @product.reviews.each do |review| %>
       <li>
-        <strong><%= review.content_body %></strong> with a rating of <strong><%= review.rating %></strong> from <em><%= review.author %></em>
+        <em><%= review.author %></em> wrote -
+        <strong><%= review.content_body %></strong> giving it a rating of <strong><%= review.rating %></strong>
         <br>
         <%= link_to "Edit", edit_product_review_path(@product, review) %>
         <%= link_to "Delete", product_review_path(@product, review),
