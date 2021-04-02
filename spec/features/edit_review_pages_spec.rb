@@ -2,12 +2,11 @@ require 'rails_helper'
 
 describe "the edit a review process" do
   it "edits a review" do
+    User.create(:email => "generic_admin@email.com", :password => "@dminzRul3", :admin => true)
     visit '/'
-    click_link 'Sign up'
-    fill_in 'user_email', :with => 'test3@email.com'
-    fill_in 'user_password', :with => 'Password1!'
-    fill_in 'user_password_confirmation', :with => 'Password1!'
-    click_on 'commit'
+    fill_in 'user_email', :with => 'generic_admin@email.com'
+    fill_in 'user_password', :with => '@dminzRul3'
+    click_on 'Log in'
     product = Product.create(:name => 'Hamburger', :country => 'Hamburg', :price => 5.99)
     visit product_path(product.id)
     click_on 'Add Review'
