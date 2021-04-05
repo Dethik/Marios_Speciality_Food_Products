@@ -4,6 +4,7 @@ describe "the delete a product process" do
   it "deletes a product" do
     User.create(:email => "generic_admin@email.com", :password => "@dminzRul3", :admin => true)
     visit '/'
+    click_link 'Log In'
     fill_in 'user_email', :with => 'generic_admin@email.com'
     fill_in 'user_password', :with => '@dminzRul3'
     click_on 'Log in'

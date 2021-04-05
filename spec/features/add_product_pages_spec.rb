@@ -3,7 +3,7 @@ require 'rails_helper'
 describe "the add a product process" do
   it "adds a new product" do
     visit '/'
-    click_link 'Sign up'
+    click_link 'Sign Up'
     fill_in 'user_email', :with => 'test3@email.com'
     fill_in 'user_password', :with => 'Password1!'
     fill_in 'user_password_confirmation', :with => 'Password1!'
@@ -19,7 +19,7 @@ describe "the add a product process" do
 
   it "gives error when no name is entered" do
     visit '/'
-    click_link 'Sign up'
+    click_link 'Sign Up'
     fill_in 'user_email', :with => 'test3@email.com'
     fill_in 'user_password', :with => 'Password1!'
     fill_in 'user_password_confirmation', :with => 'Password1!'
